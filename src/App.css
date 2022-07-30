@@ -1,0 +1,112 @@
+.App {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lottery--details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lottery--header {
+  font-size: 3.5rem;
+}
+
+.lottery--info {
+  font-size: 1.1rem;
+}
+
+.lottery--form {
+  text-align: center;
+}
+
+.section--header {
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.form--label {
+  padding: 10px;
+}
+
+.form--input {
+  --border-color: #AAA;
+
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: inherit;
+  padding: .5em;
+  border-radius: .2em;
+}
+
+.form--input:focus {
+  --border-color: #0AF;
+
+  box-shadow: 0 0 5px 0 var(--border-color);
+}
+
+.btn {
+  --background-hue: 0;
+  --background-saturation: 0%;
+  --initial-background-lightness: 90%;
+  --background-lightness: var(--initial-background-lightness);
+  --border-lightness: calc(var(--initial-background-lightness) - 20%);
+  
+  background-color: hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--background-lightness)
+  );
+  border: 1px solid hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--border-lightness)
+  );
+  outline: none;
+  cursor: pointer;
+  padding: .5em 1em;
+  border: none;
+  border-radius: .3em;
+}
+
+.btn:hover,
+.btn:focus {
+  --background-lightness: calc(var(--initial-background-lightness) - 10%);
+
+  background-color: hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--background-lightness)
+  );
+  box-shadow: 0 0 5px 0 hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--border-lightness)
+  );
+}
+
+.btn--submit {
+  --background-hue: 120;
+  --background-saturation: 100%;
+  --initial-background-lightness: 50%;
+
+  margin-top: 1rem;
+  color: white;
+}
+
+.btn--pick--winner {
+  --background-hue: 0;
+  --background-saturation: 60%;
+  --initial-background-lightness: 50%;
+
+  color: white;
+}
+
+hr {
+  width: 95%;
+  margin: 15px 0;
+}
